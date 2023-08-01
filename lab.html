@@ -1,0 +1,83 @@
+<!-- restaurant website -->
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Little Lemon</title>
+    </head>
+    <link rel="stylesheet" href="styles.css">
+    <body>
+        <a href="https://www.google.com/search?q=small+lemons&tbm=isch&sa=X&ved=2ahUKEwid3e7g7ZuAAxUKFlkFHcqrAtoQ0pQJegQIDRAB&biw=675&bih=657&dpr=2.5"><img src="https://www.48hourslogo.com/oss/attachments/2022/01/13/347418572/fce5b08add13e667d5855320c8ab6b39.png" alt="logo" width="140px"> </a>
+        <hr>
+        <h1 align="center" id="header">Welcome to the Little Lemon Website</h1>
+        <hr>
+        <center>        
+        <label for="names"> <b>Name: </b></label>
+        <input type="text" class="inputfields"><br>
+     <div id="odr">
+        <br>
+        <label for="order"><b>Order type:</b></label><br>
+        <br>
+        <label for="options">Delivery </label>
+        <input type="radio" name="order" id="options">
+        <br>
+        <label for="options">Dine-in </label>
+        <input type="radio" name="order" id="options">
+        <br>
+        <label for="options">Takeout </label>
+        <input type="radio" name="order" id="options">
+        <br>
+        <label for="options">Catering</label>
+        <input type="radio" name="order" id="options">
+        <br>
+        <br>
+    </div>
+
+        <label for="date"> <b>Date: </b></label>
+        <input type="date" class="inputfields">
+
+        <label for="time"><b>Time: </b></label>
+        <select class="inputfields">
+            <option >Select</option>
+            <option>2:00 pm</option>
+            <option>3:00 pm</option>
+            <option>4:00 pm</option>
+            <option>5:00 pm</option>
+            <option>6:00 pm</option>
+            <option>7:00 pm</option>
+            <option>8:00 pm</option>
+            <option>9:00 pm</option>
+        </select><br>
+        <br>
+        <div id="sec1">
+        <label for="diet"><b>Dietary Restrictions: </b></label><br>
+        
+        <label for="diet"> Vegetarian </label>
+        <input type="checkbox" id="diet">
+        <label for="diet1"> Low Calorie </label>
+        <input type="checkbox" id="diet1">
+        <label for="diet2"> Vegan </label>
+        <input type="checkbox" id="diet2">
+        <label for="diet3"> Keto </label>
+        <input type="checkbox" id="diet3">
+        <label for="diet4"> High Protein </label>
+        <input type="checkbox" id="diet4">
+    </div>
+
+    <br>
+    <label for="allergy"> <b>Any Allergies?</b></label>
+    <input type="text" class="inputfields"><br>
+  
+   <!-- <center><iframe width="500" height="300" src="https://www.youtube.com/embed/9skqEkqAqyk" title="How to tell if you have a food allergy, according to a nutritionist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   </center> -->
+
+    <br>
+    <a href="about.html"><button type="submit" class="btn" id="cancel"> About Us </button></a>
+    <button type="submit" class="btn" id="review" onClick="orderHandler()"> Submit Order </button>
+    </center>
+    <script type="text/javascript" src="script.js"></script>
+    </body>
+    </html>
+</html>

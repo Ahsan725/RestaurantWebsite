@@ -1,0 +1,73 @@
+body{
+    font-size: 20px;
+    font-family: Optima;
+    background-color: palegoldenrod;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.inputfields{
+    padding: 8px;
+    border-radius: 15px;
+}
+.inputfields:hover, .inputfields:focus{
+    background-color: lightgreen;
+}
+/* button{
+    background-color:lightgreen;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 20px;
+}
+button:hover{
+    scale: 120%;
+    transition: 300ms ease;
+    background-color:greenyellow
+} */
+#cancel{
+    background-color:lightskyblue;
+}
+#cancel:hover{
+    scale: 120%;
+    transition: 300ms ease;
+    background-color: navy;
+    color:white;
+}
+#review{
+    background-color:lightgreen;
+}
+#review:hover{
+    scale: 120%;
+    transition: 300ms ease;
+    background-color: green;
+    color:white;
+}
+.btn{
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 20px; 
+    margin: 10px;
+}
+
+#sec1{
+    font-size: 18px;
+    font-family: 'Comic Sans MS';
+    margin: 20px auto;
+}
+#sec1:hover,#sec1:focus{
+    background-color: lightsalmon;
+}
+
+#odr{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    padding: 10px;
+
+}
+p{
+    margin: 70px;
+}
+/* input[type="radio"]{
+} */
