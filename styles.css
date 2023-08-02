@@ -1,7 +1,12 @@
 body{
     font-size: 20px;
     font-family: Optima;
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    /* Example of a linear gradient background */
+    background-image: linear-gradient(to right, lightpink, gold);
+    /* Replace #ff0000 with the starting color, and #00ff00 with the ending color */
+    /* You can specify different colors and positions for more complex gradients */
+  
 }
 
 h1{
@@ -13,7 +18,7 @@ h1{
     border-radius: 15px;
 }
 .inputfields:hover, .inputfields:focus{
-    background-color: lightgreen;
+    background-color: lightblue;
 }
 /* button{
     background-color:lightgreen;
@@ -109,3 +114,45 @@ nav ul {
     margin: 1px;
     /* color: black; */
   }
+
+  /* Apply styles using the table ID */
+#orderTable {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: black;
+    border: #000000 1px solid;
+  }
+  
+  #orderTable thead {
+    background-color: #f2f2f2;
+    border: #000000 1px solid;
+  }
+  
+  #orderTable th {
+    padding: 12px;
+    
+    /* text-align: left; */
+  }
+  
+  #orderTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    border: #000000 1px solid;
+  }
+  
+  #orderTable td {
+    padding: 12px;
+  }
+  
+  #orderTable tfoot {
+    background-color: #f2f2f2;
+    border: #000000 1px solid;
+  }
+  
+  #orderTable tfoot td {
+    padding: 12px;
+    text-align: right;
+    font-weight: bold;
+  }
+  

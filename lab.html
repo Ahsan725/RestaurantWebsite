@@ -26,7 +26,7 @@
         <br>
         <center>        
         <label for="names"> <b>Name: </b></label>
-        <input type="text" class="inputfields"><br>
+        <input type="text" class="inputfields" id="nonEmpty"><br>
      <div id="odr">
         <br>
         <label for="order"><b>Order type:</b></label><br>
@@ -80,7 +80,38 @@
     <br>
     <label for="allergy"> <b>How many eaters?</b></label>
     <input type="text" class="inputfields" id="num" name="allergy"><br>
-  
+<br>
+
+    <label for="item">Select an item:</label>
+  <select id="item" class="inputfields">
+    <option value="0">Select an item</option>
+    <option value="10">Steak (10 USD)</option>
+    <option value="15">Salmon (15 USD)</option>
+    <option value="8">Chicken (8 USD)</option>
+  </select>
+  <button onclick="addToOrder()" class="btn">Add to Order</button>
+
+
+  <div class="post">
+    <h3>Order Summary:</h3>
+  <table id="orderTable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be added dynamically using JavaScript -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td style="text-align: left;"><strong>Total</strong></td>
+        <td id="totalPrice">0</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
    <!-- <center><iframe width="500" height="300" src="https://www.youtube.com/embed/9skqEkqAqyk" title="How to tell if you have a food allergy, according to a nutritionist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    </center> -->
 
