@@ -9,10 +9,21 @@
     </head>
     <link rel="stylesheet" href="styles.css">
     <body>
-        <a href="https://www.google.com/search?q=small+lemons&tbm=isch&sa=X&ved=2ahUKEwid3e7g7ZuAAxUKFlkFHcqrAtoQ0pQJegQIDRAB&biw=675&bih=657&dpr=2.5"><img src="https://www.48hourslogo.com/oss/attachments/2022/01/13/347418572/fce5b08add13e667d5855320c8ab6b39.png" alt="logo" width="140px"> </a>
+        <a href="landing.html"><img src="https://www.48hourslogo.com/oss/attachments/2022/01/13/347418572/fce5b08add13e667d5855320c8ab6b39.png" alt="logo" width="140px"> </a>
         <hr>
-        <h1 align="center" id="header">Welcome to the Little Lemon Website</h1>
+        <h1 align="center" id="header">Order</h1>
         <hr>
+        <div>
+            <nav class="nav">
+            <ul>
+              <button class="navbtn"><li><a href="/landing.html">Home</a></li></button>
+              <button class="navbtn"><li><a href="/lab.html">Order</a></li></button>
+              <button class="navbtn"><li><a href="/about.html">About</a></li></button>
+            </ul>
+          </nav>
+        </div>
+        <br>
+        <br>
         <center>        
         <label for="names"> <b>Name: </b></label>
         <input type="text" class="inputfields"><br>
@@ -67,14 +78,14 @@
     </div>
 
     <br>
-    <label for="allergy"> <b>Any Allergies?</b></label>
-    <input type="text" class="inputfields"><br>
+    <label for="allergy"> <b>How many eaters?</b></label>
+    <input type="text" class="inputfields" id="num" name="allergy"><br>
   
    <!-- <center><iframe width="500" height="300" src="https://www.youtube.com/embed/9skqEkqAqyk" title="How to tell if you have a food allergy, according to a nutritionist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
    </center> -->
 
     <br>
-    <a href="about.html"><button type="submit" class="btn" id="cancel"> About Us </button></a>
+    <!-- <a href="about.html"><button type="submit" class="btn" id="cancel"> About Us </button></a> -->
     <button type="submit" class="btn" id="review" onClick="orderHandler()"> Submit Order </button>
     </center>
     <script type="text/javascript" src="script.js"></script>
