@@ -86,6 +86,10 @@ nav ul {
     text-align: center;
     font-size: larger;
   }
+
+  nav ul li:hover {
+    scale: 120%;
+  }
   
   nav ul li {
     display: inline-block;
@@ -104,15 +108,22 @@ nav ul {
   
   nav ul li a:hover {
     color: #fff;
+    
   }
 
   .navbtn{
-    background-color: salmon;
+    background-color: skyblue;
     border-radius: 20px;
     padding: 10px;
     font-size: 8px; 
     margin: 1px;
     /* color: black; */
+  }
+  .navbtn:hover{
+    scale: 120%;
+    transition: 300ms ease;
+    background-color: rgb(14, 168, 229);
+    color: black;
   }
 
   /* Apply styles using the table ID */
