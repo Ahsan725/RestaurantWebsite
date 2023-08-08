@@ -13,6 +13,7 @@
           array_push($errors, "All fields are required");
         }
 
+        
         if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
             array_push($errors, "Invalid email");
         }
@@ -20,6 +21,7 @@
             array_push($errors, "Password must be at least 8 characters");
         }
 
+        //this is a test comment to see if it really works 
         if($password != $passwordRepeat){
             array_push($errors, "Passwords do not match");
         }
