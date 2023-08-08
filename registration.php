@@ -16,7 +16,6 @@
         if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
             array_push($errors, "Invalid email");
         }
-
         if(strlen($password)<8){
             array_push($errors, "Password must be at least 8 characters");
         }
