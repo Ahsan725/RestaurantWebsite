@@ -172,10 +172,11 @@ nav ul {
 }
 
 .container {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-image: linear-gradient(to right, rgb(243, 224, 121), lightpink);
   border-radius: 30px;
   padding: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 90px rgba(0, 0, 0, 0.7);
   width: 400px;
 }
 
@@ -184,15 +185,14 @@ nav ul {
   margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.form-text {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #dfdede;
+  padding: 20px;
+  border: 0px solid #dfdede;
   border-radius: 40px;
   font-size: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
 }
 
 input[type="submit"] {
