@@ -19,32 +19,29 @@
             <button class="navbtn"><li><a href="/about.html">About</a></li></button>
           </ul>
         </nav>
+      </div>  
+      
+      <div class="container">
+        <form action="registration.php" method="post">
+            <div class="form-group">
+                <input type="text" name="fullname" placeholder="Enter Full Name">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" name="repeat_password" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+                <input type="submit" name="register" placeholder="submit">
+            </div>
+        </form>
       </div>
-
-      <div class="post">
-        <h3>THANK YOU FOR YOUR ORDER!</h3>
-        <table id="orderTable">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Table rows will be added dynamically using JavaScript -->
-            </tbody>
-            <tfoot>
-              <tr>
-                <td><strong>Total</strong></td>
-                <td id="totalPrice">0</td>
-              </tr>
-            </tfoot>
-          </table>
-      </div>
-
-
-
-
+      
+      
       <script type="text/javascript" src="script.js"></script>
     </body>
     </html>
