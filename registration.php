@@ -1,54 +1,47 @@
-<?php 
-    if(isset($_POST("submit"))){
-        $fullName = $_POST["fullName"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $passwordRepeat = $_POST["repeat_password"];
-        
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        $errors = array();
-        
-        
-        if(empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)){
-          array_push($errors, "All fields are required");
-        }
+<?php
 
-        
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-            array_push($errors, "Invalid email");
-        }
-        if(strlen($password)<8){
-            array_push($errors, "Password must be at least 8 characters");
-        }
+$nam = $_POST['fullname'];
+$em = $_POST['email'];
+$pass = $_POST['password'];
+$passwordRepeat = $_POST["repeat_password"];
 
-        //this is a test comment to see if it really works 
-        if($password != $passwordRepeat){
-            array_push($errors, "Passwords do not match");
-        }
+/* this is the code for checking the log in details 
+$a = "admin";
+$p = "admin123";
 
-        require_once("database.php");
-        $sql = "SELECT * FROM users WHERE email = '$email'";
-        $result = mysqli_query($conn, $sql);
-        $rowCount = mysqli_num_rows($result);
-        if($rowCount > 0){
-            array_push($errors, "Email already exists");
-        }
+if(($um == $a) && ($ps == $pass)){
+    header("Location:http://localhost:8888/summary.html");
+    exit();
+}
+else{
+    echo "Login failed";
+}
+*/
 
-        if(count($errors)> 0){
-            foreach($errors as $error){
-                echo $error;
-            }
-        }else{
-         
-            $sql = "INSERT INTO users (full_name, email, password) VALUES ( ? , ?, ?)";
-            $stmt = mysqli_stmt_init($conn);
-            $prepareStmt = mysqli_stmt_prepare($stmt, $sql);
-            if($prepareStmt){
-                mysqli_stmt_bind_param($stmt, "sss", $fullName, $email, $passwordHash);
-                mysqli_stmt_execute($stmt);
-                echo "Registration successful";
-        }else{
-            die("Registration failed: " . mysqli_error($conn));
-        }
-    }
+$conn = mysqli_connect("localhost", "root", "root", "login_register");
+
+$sql = "SELECT * FROM test_table WHERE email = '$em'";
+$result = mysqli_query($conn, $sql);
+$rowCount = mysqli_num_rows($result);
+if($rowCount > 0){
+    echo "Email already exists"; //this is the error message that will be displayed if the email already exists
+    exit();
+}
+
+if($pass == $passwordRepeat){
+    $sql = "INSERT INTO test_table (full_name, email, password) VALUES ('$nam', '$em', '$pass')";
+}else{
+    echo "Passwords do not match";
+    exit();
+}
+$result = mysqli_query($conn, $sql);
+if($result){
+    echo "Account created!";
+}
+else{
+    echo "Error: Account Creation was unsuccessful";
+}
+
+$mysqli->close();
+
 ?>
